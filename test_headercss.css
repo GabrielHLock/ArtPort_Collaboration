@@ -1,0 +1,46 @@
+header{ 
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:30px;
+    background-color: #130c0c;
+    color: #e6e6ea;
+    top:0;
+    left:0;
+    width:100%;
+    position:fixed;
+    overflow: hidden;
+}
+
+a:link{
+    color: #e6e6ea;
+    text-decoration:none;
+    padding-top:25px;
+    padding-bottom:25px;
+    padding-left:20px;
+    padding-right:20px;
+}
+a:visited{
+    color:#e6e6ea;
+    text-decoration:none;
+}
+/* hover and active with orange background black lettering */
+/* a:hover{
+    color: #130c0c;
+    background-color:#e45f39;
+    text-decoration:none;
+}
+a:active{
+    color: #130c0c;
+    background-color:#e45f39;
+    text-decoration:none;
+} */
+/* hover and active with orange lettering no background  */
+a:hover{
+    color: #e45f39;
+    text-decoration:none;
+}
+a:active{
+    color: #e45f39;
+    text-decoration:none;
+}
