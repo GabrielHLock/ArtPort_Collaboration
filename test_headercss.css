@@ -1,8 +1,8 @@
 header{ 
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height:30px;
+    height:40px;
     background-color: #130c0c;
     color: #e6e6ea;
     top:0;
@@ -20,6 +20,7 @@ a:link{
     padding-left:20px;
     padding-right:20px;
 }
+
 a:visited{
     color:#e6e6ea;
     text-decoration:none;
@@ -44,3 +45,16 @@ a:active{
     color: #e45f39;
     text-decoration:none;
 }
+
+input[type="submit"] {
+    background-color: #130c0c ; 
+    border: 1px solid #e45f39; 
+    padding: 7px; 
+    border-radius:15px;
+    color: #e45f39;
+}
+  
+  input[type="submit"]:hover {
+    background-color: #e45f39;
+    color:#e6e6ea;
+  }
