@@ -5,7 +5,7 @@ app.set("view engine", "ejs")
 app.use(express.static('public'))
 
 app.get('/',(req,res)=>
-	//res.render('first',{data:data})
+	res.render('main')
 )
 
 app.listen(8080,()=>console.log("server running"))
