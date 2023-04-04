@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "pg": "^8.10.0"
+  },
+  "name": "artport_collaboration",
+  "description": "# Color Scheme Dark background: #1a1818 Lighter dark (header, footer): #130c0c Orange pop color: #e45f39 White text color: #e6e6ea",
+  "version": "1.0.0",
+  "main": "index1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielHLock/ArtPort_Collaboration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielHLock/ArtPort_Collaboration/issues"
+  },
+  "homepage": "https://github.com/GabrielHLock/ArtPort_Collaboration#readme"
+}
