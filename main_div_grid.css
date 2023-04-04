@@ -1,0 +1,10 @@
+.gridspace{
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+	margin: 5% 10%;
+}
+.griditems{
+	display: flex;
+	flex-direction: column;
+}

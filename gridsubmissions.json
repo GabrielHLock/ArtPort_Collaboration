@@ -1,0 +1,49 @@
+{
+    "users": [
+        {
+            "username": "",
+            "submissions": [
+                {
+                    "title": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "title": "",
+                    "image": "",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "username": "",
+            "submissions": [
+                {
+                    "title": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "title": "",
+                    "image": "",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "username": "",
+            "submissions": [
+                {
+                    "title": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "title": "",
+                    "image": "",
+                    "description": ""
+                }
+            ] 
+        }
+    ]
+}
