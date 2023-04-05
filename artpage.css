@@ -1,0 +1,32 @@
+.artpagespace{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 10px;
+}
+.main_artarea{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	max-width: inherit;
+	max-height: inherit;
+}
+#main_artwork_expanded{
+	width: inherit;
+	height: inherit;
+}
+.artinfo{
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+}
+.art_description{
+	border-bottom: 1px solid lightgrey;
+	padding: 0 0 10px 10px;
+}
+.contacts{
+	display: flex;
+	justify-content: center;
+	padding: 10px 0 0 10px;
+}
