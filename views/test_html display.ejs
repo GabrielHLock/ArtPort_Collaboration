@@ -10,8 +10,7 @@
          .grid_container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0;
-
+            gap: 0
         }
         
         /* Define media queries for different screen sizes */
@@ -107,8 +106,8 @@
          const submissionsContainer = document.getElementById("submissions_container");
 
          fetch("../data/submissions.json")
-  .then((response) => response.json())
-  .then((jsonData) => {
+            .then((response) => response.json())
+            .then((jsonData) => {
             // Loop through each user
             jsonData.users.forEach((user) => {
             // Loop through each submission for this user
