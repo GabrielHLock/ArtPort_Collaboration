@@ -1,49 +1,54 @@
 {
-    "users": [
+  "users": [
+    {
+      "username": "Masterli",
+      "submissions": [
         {
-            "username": "Masterli",
-            "submissions": [
-                {
-                    "title": "First upload!",
-                    "image": "../images/firstUpload.png",
-                    "description": "captures the spirit of new beginnings with a sense of excitement and anticipation."
-                },
-                {
-                    "title": "Day 2",
-                    "image": "../images/day2.png",
-                    "description": "The photo inspires a sense of adventure and exploration, as the viewer is drawn into the majestic but daunting beauty of the natural world"
-                }
-            ]
+          "title": "First upload!",
+          "image": "../images/firstUpload.png",
+          "description": "captures the spirit of new beginnings with a sense of excitement and anticipation."
         },
         {
-            "username": "BotVeteran",
-            "submissions": [
-                {
-                    "title": "Concept art",
-                    "image": "../images/conceptart.png",
-                    "description": "This concept art image depicts my new unique and intriguing character, portrayed through bold and striking visual elements."
-                },
-                {
-                    "title": "Game Design",
-                    "image": "../images/gameObjects.png",
-                    "description": "These are some items that will appear in-game, each crafted with intricate and detailed designs."
-                }
-            ]
+          "title": "Day 2",
+          "image": "../images/day2.png",
+          "description": "The photo inspires a sense of adventure and exploration, as the viewer is drawn into the majestic but daunting beauty of the natural world"
         },
         {
-            "username": "BugSport",
-            "submissions": [
-                {
-                    "title": "Bugs",
-                    "image": "../images/bugs.png",
-                    "description": "captivating and intricately designed bug, showcasing its beauty and unique characteristics."
-                },
-                {
-                    "title": "Bugs 2.0",
-                    "image": "../images/bugs2.png",
-                    "description": "diverse array of bugs, each uniquely crafted with intricate details and vivid colors."
-                }
-            ] 
+          "title": "jhgj",
+          "image": "../images/1681145484693.png",
+          "description": "ghjgjhgjh"
         }
-    ]
+      ]
+    },
+    {
+      "username": "BotVeteran",
+      "submissions": [
+        {
+          "title": "Concept art",
+          "image": "../images/conceptart.png",
+          "description": "This concept art image depicts my new unique and intriguing character, portrayed through bold and striking visual elements."
+        },
+        {
+          "title": "Game Design",
+          "image": "../images/gameObjects.png",
+          "description": "These are some items that will appear in-game, each crafted with intricate and detailed designs."
+        }
+      ]
+    },
+    {
+      "username": "BugSport",
+      "submissions": [
+        {
+          "title": "Bugs",
+          "image": "../images/bugs.png",
+          "description": "captivating and intricately designed bug, showcasing its beauty and unique characteristics."
+        },
+        {
+          "title": "Bugs 2.0",
+          "image": "../images/bugs2.png",
+          "description": "diverse array of bugs, each uniquely crafted with intricate details and vivid colors."
+        }
+      ]
+    }
+  ]
 }

@@ -77,44 +77,66 @@
 </head>
 <body>
      
-      <a href="#" id="upload-button"><input type="submit" value="Upload"></a>
+<a href="#" id="upload-button"><input type="submit" value="Upload"></a>
 
-      <div id="popup-container">
+<div id="popup-container">
 
-       <!-- <%- include('partials/uploadForm') %> -->
-       <form action="/submit" method="post" enctype="multipart/form-data">
-        <label for="username">Username</label><br><br>
-        <input type="text" id="username" name="username" required><br>
+  <!-- <%- include('partials/uploadForm') %> -->
+  <form action="/submit" method="post" enctype="multipart/form-data">
+  <label for="username">Username</label><br><br>
+  <input type="text" id="username" name="username" required><br>
 
-        <label for="title">Title</label><br><br>
-        <input type="text" id="title" name="title" required><br>
+  <label for="title">Title</label><br><br>
+  <input type="text" id="title" name="title"><br>
 
-        <label for="description">Description</label><br><br>
-        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+  <label for="description">Description</label><br><br>
+  <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
 
-        <div class="photoSubmit">
-        <label for="photo">Photo</label>
-        <input type="file" id="photo" name="photo" accept="image" required><br>
-        </div>
+  <div class="photoSubmit">
+  <label for="photo">Photo</label>
+  <input type="file" id="photo" name="image" accept="image"><br>
+  </div>
 
-        <div class="submit-container">
-          <input type="submit" value="Upload" id="submitFormBtn">
-        </div>
-      </form>
-      </div>
-    
+  <div class="submit-container">
+    <input type="submit" value="Upload" id="submitFormBtn">
+  </div>
+</form>
+</div>
 
-      <div class="grid_container" id="submissions_container"></div>
+
+<div class="grid_container" id="submissions_container"></div>
   
-      <script src="/gridtest.js"></script>
-      <script>
-        const openPopupButton = document.getElementById('upload-button');
-        const popupContainer = document.getElementById('popup-container');
+<script src="/gridtest.js"></script>
+<script> 
+  const form = document.querySelector('form');
+  const openPopupButton = document.getElementById('upload-button');
+  const popupContainer = document.getElementById('popup-container');
 
-        openPopupButton.addEventListener('click', () => {
-          popupContainer.style.display = 'block';
-        });
-      </script>
+  openPopupButton.addEventListener('click', () => {
+    popupContainer.style.display = 'block';
+  });
+
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    fetch('/submit', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result);
+        alert('Submission added successfully!');
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Error adding submission');
+      });
+  });
+</script>
       
 
 </body>

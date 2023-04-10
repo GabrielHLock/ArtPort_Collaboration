@@ -1,37 +1,71 @@
 const express = require('express');
-const app = express();
-const port = 3000;
+const multer = require('multer');
+const bodyParser = require('body-parser');
 const fs = require('fs');
+const path = require('path');
 
-var bodyParser = require('body-parser');
+const app = express();
+const upload = multer({
+  dest: 'images/',
+  fileFilter: function (req, file, cb) {
+    const filetypes = /jpeg|jpg|png/;
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    const mimetype = filetypes.test(file.mimetype);
+    if (mimetype && extname) {
+      return cb(null, true);
+    } else {
+      cb(new Error('Invalid file type. Only JPEG and PNG files are allowed.'))
+    }
+  }
+});
+
+const port = 3000;
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const jsonData = fs.readFileSync('data/submissions.json');
-let submissionsData = JSON.parse(jsonData).users;
+const data = JSON.parse(jsonData);
 
-app.set("view engine","ejs")
-app.get ('/',(req,res)=>
-res.render('testUpload'))
+app.set('view engine', 'ejs');
 
-app.post('/submit', (req, res) => {
-  res.send(req.body);
-  // const { username, title, image, description } = req.body;
+app.get('/', (req, res) => {
+  res.render('testUpload');
+});
+
+app.post('/submit', upload.single('image'), (req, res, next) => {
+  const { username, title, description } = req.body;
 
   // Check if the username already exists in the submissions data
-//   const user = submissionsData.find(user => user.username === username);
-// console.log(user, username);
-//   if (!user) {
-//     return res.status(404).send('This username does not exist. Please create a new account or sign in if you already have one.');
-//   }
+  const user = data.users.find((user) => user.username === username);
 
-//   // Add new submission to the user's submissions and save to file
-//   user.submissions.push({ title, image, description });
-//   fs.writeFileSync('submissions.json', JSON.stringify({ users: submissionsData }));
+  if (!user) {
+    return res
+      .status(404)
+      .send(
+        'This username does not exist. Please create a new account or sign in if you already have one.'
+      );
+  }
 
-//   res.send('Submission added successfully!');
+  if (!req.file) {
+    return res.status(400).send('Please select an image file.');
+  }
+
+  // Add new submission to the user's submissions and save to file
+  const ext = path.extname(req.file.originalname).toLowerCase();
+  const filename = `${Date.now()}${ext}`;
+  fs.renameSync(req.file.path, `images/${filename}`);
+  user.submissions.push({
+    title,
+    image: `../images/${filename}`,
+    description,
+  });
+
+  const updatedJsonData = JSON.stringify(data, null, 2);
+  fs.writeFileSync('data/submissions.json', updatedJsonData);
+
+  res.send('Submission added successfully!');
 });
 
 app.listen(port, () => {
