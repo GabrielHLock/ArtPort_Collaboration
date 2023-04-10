@@ -25,7 +25,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const jsonData = fs.readFileSync('data/submissions.json');
+const jsonData = fs.readFileSync('express/data/submissions.json');
 const data = JSON.parse(jsonData);
 
 app.set('view engine', 'ejs');
@@ -63,7 +63,7 @@ app.post('/submit', upload.single('image'), (req, res, next) => {
   });
 
   const updatedJsonData = JSON.stringify(data, null, 2);
-  fs.writeFileSync('data/submissions.json', updatedJsonData);
+  fs.writeFileSync('express/data/submissions.json', updatedJsonData);
 
   res.send('Submission added successfully!');
 });
