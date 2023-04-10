@@ -14,9 +14,9 @@ app.get('/',(req,res)=>
 
 // code to submit the form data to the json file (try later when you get the power back at home)
 
-//app.use(express.static('data'))
-//app.use (express.static('uploads'))
-//app.use (express.static('images'))
+// app.use(express.static('data'))
+// app.use (express.static('uploads'))
+// app.use (express.static('images'))
 
 // app.post('/submit', (req, res) => {
 // 	const { username, title, description } = req.body;
