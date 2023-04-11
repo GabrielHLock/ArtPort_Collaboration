@@ -25,6 +25,9 @@
 	width: 100%;
 	padding: 10px;
 }
+.art_title{
+	padding: 0 0 10px 10px;
+}
 .art_description{
 	border-bottom: 1px solid #e6e6ea;
 	padding: 0 0 10px 10px;

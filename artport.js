@@ -12,9 +12,4 @@ app.get('/artpage',(req,res)=>
 	res.render('artpage')
 )
 
-app.get('/login',(req,res)=>
-	res.render('login_page')
-)
-
-
 app.listen(8080,()=>console.log("server running"))

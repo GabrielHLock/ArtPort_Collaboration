@@ -7,6 +7,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
+    z-index: 3;
 }
 
 #login_popup .login_wrap {
@@ -16,12 +17,12 @@
   transform: translate(-50%, -50%);
   background-color: #1a1818;
   color: #e6e6ea;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: inline-block;
   text-align: left;
-  z-index: 2;
+  z-index: 3;
 }
 
 .login_wrap {
@@ -33,7 +34,17 @@
 
 .photo_div {
     top: 20px;
-
+}
+.photo{
+    z-index: inherit;
+}
+#loginclosebutton{
+    display: flex;
+    justify-content: right;
+    z-index: 3;
+}
+#loginclosebutton:hover{
+    cursor: pointer;
 }
 .img_text {
     color: #e6e6ea;
