@@ -1,0 +1,31 @@
+body{
+    min-height: 100vh;
+    /* display: flex; */
+}
+
+
+.footer{
+background: linear-gradient( #130c0c, #e45f39);
+padding: 35px;
+display: flex;
+justify-content: center;
+align-self: flex-end;
+width: 100%; 
+height: 100px;
+bottom: 0;
+margin-top: auto;
+
+}
+
+.foot1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+text-align: center;
+
+}
+
+.col1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
