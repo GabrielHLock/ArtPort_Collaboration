@@ -1,0 +1,75 @@
+#login_popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#login_popup .login_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a1818;
+  color: #e6e6ea;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  text-align: left;
+  z-index: 2;
+}
+
+.login_wrap {
+    height: 475px;
+    width: 500px;
+    background-color: #e6e6ea;
+
+}
+
+.photo_div {
+    top: 20px;
+
+}
+.img_text {
+    color: #e6e6ea;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login_form {
+    display: block;
+    text-align: center;
+    margin: 35px;
+
+}
+
+.forgot_password {
+background-color: #130c0c;
+color: #e6e6ea;
+border: none;
+
+}
+
+
+
+.login_button {
+    background-color: #130c0c;
+    color: #e6e6ea;
+    border: none;
+    }
+
+.join_button {
+    background-color: #130c0c;
+    color: #e6e6ea;
+    border: none;
+    padding: 25px 35px;
+    
+}
+
