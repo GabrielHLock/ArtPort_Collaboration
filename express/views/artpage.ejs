@@ -5,35 +5,41 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="artpage.css">
-        <link rel="stylesheet" href="main_div.css">
+        <link rel="stylesheet" href="/css/artpage.css">
+        <link rel="stylesheet" href="/css/main_div.css">
+        <link rel="stylesheet" href="/css/fonts.css">
+        <link rel="stylesheet" href="/css/body.css">
     </head>
     <body>
-        <%- include('./partials/header') %>
-        <main>
-        <div class="main_div">
-        <div class="artpagespace">
-            <!-- area which displays the art -->
-            <div class="main_artarea">
-                <!-- placeholder image -->
-                <img id="main_artwork_expanded" src="temporaryimage_toberemoved.jpg" alt="image goes here">
-            </div>
-            <div class="artinfo">
-            <div class="art_title">
-                <!-- js for submitted title goes here -->
-                <h2>Art title</h2>
-            </div>
-            <div class="art_description">
-                <!-- placeholder for piece description -->
-                <span>Description of art piece</span>
-            </div>
-            <div class="contacts">
-                <span>Contact Links</span>
-            </div>
-            </div>
+        
+        <div>
+            <%- include('./partials/header') %>
+            <%- include('./partials/side_nav') %>
+            <main>
+                <div class="main_div">
+                    <div class="artpagespace">
+                        <!-- area which displays the art -->
+                        <div class="main_artarea">
+                            <!-- placeholder image -->
+                            <img id="main_artwork_expanded" src="/images/temporaryimage_toberemoved.jpg" alt="image goes here">
+                        </div>
+                        <div class="artinfo">
+                            <div class="art_title">
+                                <!-- js for submitted title goes here -->
+                                <h2>Art title</h2>
+                            </div>
+                            <div class="art_description">
+                                <!-- placeholder for piece description -->
+                                <span>Description of art piece</span>
+                            </div>
+                            <div class="contacts">
+                                <span>Contact Links</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-        </div>
-        </main>
         <%- include('./partials/footer') %>
     </body>
 </html>

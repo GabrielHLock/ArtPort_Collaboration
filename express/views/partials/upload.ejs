@@ -1,0 +1,19 @@
+<form action="/submit" method="post" enctype="multipart/form-data">
+  <label for="username">Username</label><br><br>
+  <input type="text" id="username" name="username" required><br>
+
+  <label for="title">Title</label><br><br>
+  <input type="text" id="title" name="title"><br>
+
+  <label for="description">Description</label><br><br>
+  <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+
+  <div class="photoSubmit">
+  <label for="photo">Photo</label>
+  <input type="file" id="photo" name="image" accept="image/*"><br>
+  </div>
+
+  <div class="submit-container">
+    <input type="submit" value="Upload" id="submitFormBtn">
+  </div>
+</form>

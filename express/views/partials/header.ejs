@@ -5,19 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="test_headercss.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/uploadForm.css">
+    <link rel="stylesheet" href="/css/login_page.css">
 </head>
 <body>
-   <header>
-    <div id="tNavLeft"><a href="" id="logo"><img src=""></a>
-    <a href="" id="title">ArtPort</a>
-    </div>
-    <!-- <div id="searchbar"></div> -->
-    <div id="tNavRight">
-    <a href ="">Login </a>
-    <a href="">Signup</a> 
-    <a href=""> <input type="submit" value="Upload"></a>
-    </div>
-</header> 
+    <%- include('../partials/login_page') %>
+    <%- include('../partials/upload') %>
+    
+    <header>
+        <div id="tNavLeft">
+            <a href="/" id="logo">
+                <img src="">
+            </a>
+            <a href="/" id="title">ArtPort</a>
+        </div>
+        <div id="tNavRight">
+            <a id="login-button">Login</a>
+            <a href="">Signup</a>
+            <a href="/upload">
+                <input type="submit" value="Upload">
+            </a>
+        </div>
+    </header> 
+
+    <script src="/js/login_page.js"></script>
+    <script src="/js/uploadForm.js"></script>
 </body>
 </html>

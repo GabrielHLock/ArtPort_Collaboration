@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const upload = multer({
-  dest: 'images/',
+  dest: 'express/images/',
   fileFilter: function (req, file, cb) {
     const filetypes = /jpeg|jpg|png/;
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -19,9 +19,9 @@ const upload = multer({
   }
 });
 
-const port = 3000;
+const port = 8080;
 
-app.use(express.static('public'));
+app.use(express.static('express/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -29,9 +29,18 @@ const jsonData = fs.readFileSync('express/data/submissions.json');
 const data = JSON.parse(jsonData);
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'express/views'));
 
 app.get('/', (req, res) => {
-  res.render('testUpload');
+  res.render('homepage.ejs');
+});
+
+app.get('/artpage', (req, res) => {
+  res.render('artpage.ejs');
+});
+
+app.get('/login', (req, res) => {
+  res.render('login_page.ejs');
 });
 
 app.post('/submit', upload.single('image'), (req, res, next) => {
@@ -55,7 +64,7 @@ app.post('/submit', upload.single('image'), (req, res, next) => {
   // Add new submission to the user's submissions and save to file
   const ext = path.extname(req.file.originalname).toLowerCase();
   const filename = `${Date.now()}${ext}`;
-  fs.renameSync(req.file.path, `images/${filename}`);
+  fs.renameSync(req.file.path, `express/images/${filename}`);
   user.submissions.push({
     title,
     image: `../images/${filename}`,
