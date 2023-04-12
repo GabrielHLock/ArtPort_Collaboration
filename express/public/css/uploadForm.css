@@ -1,3 +1,23 @@
+#upload-button {
+  display: inline-block;
+  background-color:#e45f39;
+  border: none;
+  color: #e6e6ea;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20px;
+  border-radius: 19px;
+}
+
+#upload-button:hover {
+  background-color: #1a1818;
+  border: 2px solid #e45f39;
+  color: #e45f39;
+}
+
 #upload-popup {
     display: none;
     position: fixed;
@@ -7,6 +27,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
+  }
+
+  #upload-popup.show {
+    display: flex;
   }
 
   #upload-popup form {

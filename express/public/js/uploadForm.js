@@ -1,11 +1,17 @@
 const form = document.querySelector('form');
-const openPopupButton = document.getElementById('upload-button');
-const popupContainer = document.getElementById('upload-popup');
+const openUploadPopupButton = document.getElementById('upload-button');
+const uploadPopupContainer = document.getElementById('upload-popup');
 
-openPopupButton.addEventListener('click', () => {
-  popupContainer.style.display = 'block';
+openUploadPopupButton.addEventListener('click', () => {
+  uploadPopupContainer.style.display = 'block';
+  uploadPopupContainer.classList.add('show');
 });
 
+const uploadButton = document.querySelector('#tNavRight #upload-button');
+uploadButton.addEventListener('click', () => {
+  uploadPopupContainer.style.display = 'block';
+  uploadPopupContainer.classList.add('show');
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();

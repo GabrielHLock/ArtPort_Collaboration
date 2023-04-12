@@ -1,7 +1,7 @@
 
-const openPopupButton = document.getElementById('login-button');
-const popupContainer = document.getElementById('login_popup');
+const openLoginPopupButton = document.getElementById('login-button');
+const loginPopupContainer = document.getElementById('login_popup');
 
-openPopupButton.addEventListener('click', () => {
-  popupContainer.style.display = 'block';
+openLoginPopupButton.addEventListener('click', () => {
+  loginPopupContainer.style.display = 'block';
 });
