@@ -22,6 +22,13 @@ const upload = multer({
 const port = 8080;
 
 app.use(express.static('express/public'));
+app.get('/data', (req, res) => {
+  const data = {
+    message: 'Hello, world!',
+    number: 42
+  };
+  res.json(data);
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

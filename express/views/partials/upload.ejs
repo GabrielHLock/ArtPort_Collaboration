@@ -1,13 +1,18 @@
 <div id="upload-popup">
 <form action="/submit" method="post" enctype="multipart/form-data">
-  <label for="username">Username</label><br><br>
-  <input type="text" id="username" name="username" required><br>
+  <span id="uploadclosebutton" class="material-symbols-outlined">X</span>
+  <div id="imagePreview">
+    <output id="imagePreviewOutput"></output>
+  </div>
 
-  <label for="title">Title</label><br><br>
-  <input type="text" id="title" name="title"><br>
 
-  <label for="description">Description</label><br><br>
-  <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+  <input type="text" id="uploadUsername" name="username" required placeholder="Username"><br>
+
+  
+  <input type="text" id="title" name="title" placeholder="Title"><br>
+
+ 
+  <textarea id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea><br>
 
   <div class="photoSubmit">
   <label for="photo">Photo</label>

@@ -63,4 +63,14 @@ input[type="submit"] {
 
 #login-button:hover{
     cursor:pointer;
+    margin-right: 10px;
 }
+
+a[href=''] {
+    margin-right: 20px;
+  }
+
+#upload-button {
+    margin-right: 20px; 
+    margin-left: 5px; 
+  }
