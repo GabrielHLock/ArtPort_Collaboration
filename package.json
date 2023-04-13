@@ -6,5 +6,14 @@
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.22",
     "pg": "^8.10.0"
-  }
+  },
+  "name": "artport_collaboration",
+  "description": "# Color Scheme Dark background: #1a1818 Lighter dark (header, footer): #130c0c Orange pop color: #e45f39 White text color: #e6e6ea",
+  "version": "1.0.0",
+  "main": "artport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }

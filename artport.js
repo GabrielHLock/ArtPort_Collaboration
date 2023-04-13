@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const upload = multer({
-  dest: 'express/images/',
+  dest: '../express/public/images/',
   fileFilter: function (req, file, cb) {
     const filetypes = /jpeg|jpg|png/;
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -22,21 +22,20 @@ const upload = multer({
 const port = 8080;
 
 app.use(express.static('express/public'));
-app.get('/data', (req, res) => {
-  const data = {
-    message: 'Hello, world!',
-    number: 42
-  };
-  res.json(data);
-});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
 
-const jsonData = fs.readFileSync('express/data/submissions.json');
+const jsonData = fs.readFileSync('express/public/data/submissions.json');
 const data = JSON.parse(jsonData);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'express/views'));
+app.set('data', path.join(__dirname, 'express/data'));
+app.set('images', path.join(__dirname, 'express/images'));
 
 app.get('/', (req, res) => {
   res.render('homepage.ejs');
@@ -79,7 +78,7 @@ app.post('/submit', upload.single('image'), (req, res, next) => {
   });
 
   const updatedJsonData = JSON.stringify(data, null, 2);
-  fs.writeFileSync('express/data/submissions.json', updatedJsonData);
+  fs.writeFileSync('express/public/data/submissions.json', updatedJsonData);
 
   res.send('Submission added successfully!');
 });

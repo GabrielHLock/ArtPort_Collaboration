@@ -1,13 +1,14 @@
 const submissionsContainer = document.getElementById("submissions_container");
 
+console.log("Starting fetch call...");
 fetch("../data/submissions.json")
-   .then((response) => response.json())
-   .then((jsonData) => {
-   // Loop through each user
-   jsonData.users.forEach((user) => {
-   // Loop through each submission for this user
-   user.submissions.forEach((submission) => {
-   // Create a new div element with the grid_item class
+.then((response) => response.json())
+.then((jsonData) => {
+// Loop through each user
+jsonData.users.forEach((user) => {
+// Loop through each submission for this user
+user.submissions.forEach((submission) => {
+// Create a new div element with the grid_item class
 const gridItem = document.createElement("div");
 gridItem.classList.add("grid_item");
 

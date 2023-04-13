@@ -2,7 +2,7 @@
   .grid_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0
+    gap: 0;
 }
 
 /* Define media queries for different screen sizes */
