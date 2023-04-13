@@ -30,7 +30,7 @@
     flex-direction: column;
     position: relative; 
     width: 100%; 
-    height: 100%; 
+    height: 200px; 
 }
 
 /* Define the overlay for the grid item */
