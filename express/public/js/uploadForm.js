@@ -15,7 +15,7 @@ closeuploadPopupButton.addEventListener('click', () => {
 });
 
 
-const uploadButton = document.querySelector('#tNavRight #upload-button');
+const uploadButton = document.querySelector('#upload-button');
 uploadButton.addEventListener('click', () => {
   uploadPopupContainer.style.display = 'block';
   uploadPopupContainer.classList.add('show');
