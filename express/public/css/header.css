@@ -2,7 +2,7 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height:50px;
+    height:60px;
     background-color: #130c0c;
     color: #e6e6ea;
     top:0;
@@ -15,8 +15,8 @@ header{
 }
 
 #logo img{
-    height:35px;
-    width:35px;
+    height:40px;
+    width:40px;
 }
 
 #tNavLeft {

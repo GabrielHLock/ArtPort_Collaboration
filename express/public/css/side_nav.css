@@ -9,7 +9,7 @@
     }
     
     
-    .side_nav a {
+    .side_nav a{
         display: block;
         color: #e6e6ea;
         padding: 30px 30px 25px 20px ;
@@ -18,6 +18,11 @@
         margin-top: inherit;
     }
     
+    .side_nav a#firstHashtag{
+        position: relative;
+        top: 20px;
+    }
+
     .side_nav a:hover {
         color: #e45f39;
     }
