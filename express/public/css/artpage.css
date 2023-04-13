@@ -2,13 +2,13 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding-top: 60px;
+	margin-top: 40px;
+	padding-top: 30px;
+	padding-bottom: 60px;
 }
 .main_artarea{
 	display: flex;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
 	max-width: inherit;
 	max-height: inherit;
 }
