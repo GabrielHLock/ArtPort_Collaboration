@@ -1,9 +1,9 @@
 #upload-button {
   display: inline-block;
   background-color:#e45f39;
-  border: none;
+  border: 2px solid #e45f39;
   color: #e6e6ea;
-  padding: 5px 10px;
+  padding: 5px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
