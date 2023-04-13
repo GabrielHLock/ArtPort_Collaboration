@@ -142,3 +142,16 @@ textarea::placeholder {
   color: #130c0c;
   font-weight: bold;
 }
+
+#imagePreview{
+  display: flex;
+  justify-content: center;
+  max-height: 500px;
+  max-width: 500px;
+}
+
+#imagePreviewOutput img{
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: scale-down;
+}

@@ -8,7 +8,10 @@
     float: left;
     }
     
-    
+.sidenavlinks{
+    height: 100vh;
+}
+
     .side_nav a{
         display: block;
         color: #e6e6ea;
