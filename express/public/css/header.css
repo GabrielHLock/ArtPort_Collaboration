@@ -57,10 +57,10 @@ input[type="submit"] {
     color: #e45f39;
 }
   
-  input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #e45f39;
     color:#e6e6ea;
-  }
+}
 
 #login-button:hover{
     cursor:pointer;

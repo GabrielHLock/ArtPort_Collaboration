@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const upload = multer({
-  dest: '../express/public/images/',
+  dest: './express/public/images/',
   fileFilter: function (req, file, cb) {
     const filetypes = /jpeg|jpg|png/;
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -70,7 +70,7 @@ app.post('/submit', upload.single('image'), (req, res, next) => {
   // Add new submission to the user's submissions and save to file
   const ext = path.extname(req.file.originalname).toLowerCase();
   const filename = `${Date.now()}${ext}`;
-  fs.renameSync(req.file.path, `express/images/${filename}`);
+  fs.renameSync(req.file.path, `express/public/images/${filename}`);
   user.submissions.push({
     title,
     image: `../images/${filename}`,
