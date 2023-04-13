@@ -1,40 +1,29 @@
-  /* Define the grid container */
-  .grid_container {
+/* Define the grid container */
+.grid_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0;
-}
-
-/* Define media queries for different screen sizes */
-@media (min-width: 500px ) {
+    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Define media query for small screens */
+  @media (max-width: 767px) {
     .grid_container {
-        grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 80px) {
-    .grid_container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 50px) {
-    .grid_container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Define the grid item */
-.grid_item {
+  }
+  
+  /* Define the grid item */
+  .grid_item {
     display: flex;
     flex-direction: column;
     position: relative; 
     width: 100%; 
     height: 200px; 
-}
-
-/* Define the overlay for the grid item */
-.grid_item .overlay {
+    object-fit: scale-down;
+  }
+  
+  /* Define the overlay for the grid item */
+  .grid_item .overlay {
     position: absolute;
     justify-content: center;
     width: 100%;
@@ -47,44 +36,45 @@
     transition: opacity 0.3s ease-in-out;
     padding: 10px;
     box-sizing: border-box;
-}
-
-/* Show the overlay when the grid item is hovered */
-    .grid_item:hover .overlay {
+  }
+  
+  /* Show the overlay when the grid item is hovered */
+  .grid_item:hover .overlay {
     opacity: 1;
-}
-
-/* Define the overlay's title */
-.grid_item .overlay h2 {
+  }
+  
+  /* Define the overlay's title */
+  .grid_item .overlay h2 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-}
-
-/* Define the overlay's description */
-.grid_item .overlay p {
+  }
+  
+  /* Define the overlay's description */
+  .grid_item .overlay p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-}
-
-/* Define the overlay's username */
-.grid_item .overlay span {
+  }
+  
+  /* Define the overlay's username */
+  .grid_item .overlay span {
     font-size: 0.8rem;
-}
-
-/* Define the card */
-.card {
+  }
+  
+  /* Define the card */
+  .card {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 100%;
-}
-
-/* Define the card's image */
-.card img {
+  }
+  
+  /* Define the card's image */
+  .card img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+  }
+  
