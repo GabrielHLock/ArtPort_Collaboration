@@ -14,31 +14,32 @@ header{
     border-bottom: 1px solid #e6e6ea;
 }
 
+#logo img{
+    height:35px;
+    width:35px;
+}
+
+#tNavLeft {
+flex: 1;
+}
+
+#title {
+margin-left: 10px;
+}
+
 a:link{
     color: #e6e6ea;
     text-decoration:none;
     padding-top:25px;
     padding-bottom:25px;
     padding-left:20px;
-    padding-right:20px;
 }
 
 a:visited{
     color:#e6e6ea;
     text-decoration:none;
 }
-/* hover and active with orange background black lettering */
-/* a:hover{
-    color: #130c0c;
-    background-color:#e45f39;
-    text-decoration:none;
-}
-a:active{
-    color: #130c0c;
-    background-color:#e45f39;
-    text-decoration:none;
-} */
-/* hover and active with orange lettering no background  */
+
 a:hover{
     color: #e45f39;
     text-decoration:none;
@@ -63,14 +64,12 @@ input[type="submit"] {
 
 #login-button:hover{
     cursor:pointer;
-    margin-right: 10px;
 }
 
 a[href=''] {
-    margin-right: 20px;
+    margin-right: 5px;
   }
 
 #upload-button {
-    margin-right: 20px; 
-    margin-left: 5px; 
+    margin-right: 20px;
   }

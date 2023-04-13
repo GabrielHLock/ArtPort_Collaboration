@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="/css/grid.css">
-        <link rel="stylesheet" href="/css/homepage.css"
+        <link rel="stylesheet" href="/css/homepage.css">
         <link rel="stylesheet" href="/css/main_div.css">
         <link rel="stylesheet" href="/css/fonts.css">
         <link rel="stylesheet" href="/css/body.css">
@@ -15,12 +15,13 @@
         
         <div>
             <%- include('./partials/header') %>
-            <%- include('./partials/side_nav') %>
+            
             <main>
                 <div class="main_div">
                     <div class="homepagespace">
+                        <%- include('./partials/side_nav') %>
                         <div class="main_imagearea">
-                            <div class="grid_container" id="submissions_container"></div>
+                            <%- include('./partials/grid') %>
                         </div>
                     </div>
                 </div>
